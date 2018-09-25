@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JQuery basic functions</title>
+    <link rel="stylesheet" type="text/css" href="functions-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            // your jquery codes here
+            $('button.hide').click(function() {
+                $('.hide_show p').hide()
+            })
+            $('button.show').click(function() {
+                $('.hide_show p').show()
+            })
+
+
+            $('.toggle button').click(function() {
+                $('.toggle p').toggle()
+            })
+
+
+            $('button.slideup').click(function() {
+                $('.slide p').slideUp()
+            })
+            $('button.slidedown').click(function() {
+                $('.slide p').slideDown()
+            })
+
+            $('.slidetoggle button').click(function() {
+                $('.slidetoggle p').slideToggle()
+            })
+
+
+            $('button.fadein').click(function() {
+                $('.fade p').fadeIn()
+            })
+            $('button.fadeout').click(function() {
+                console.log("clicked fade out");
+                $('.fade p').fadeOut()
+            })
+
+
+            $('.addclass button').click(function() {
+                $('.addclass p').addClass('red')
+            })
+
+
+            $('.before button').click(function() {
+                $('.before p').before('<p class="new"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>')
+            })
+
+
+            $('.after button').click(function() {
+                $('.after p').after('<p class="new"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>')
+            })
+
+
+            $('.append button').click(function() {
+                $('.append p').append('<span class="new">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</span>')
+            })
+
+
+            $('.html button').click(function() {
+                $('.html p').html('<span class="new">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</span>')
+            })
+
+
+            $('button.getattr').click(function() {
+                console.log('The class of this paragraph is ' + $('.attribute p').attr("class"))
+                $('.attribute .reveal').html('The class of the paragraph above is ' + $('.attribute p').attr("class"))
+            })
+            $('button.changeattr').click(function() {
+                $('.attribute p.example').attr("class", "new")
+            })
+
+
+            $('.val button').click(function() {
+                console.log("clicked")
+                $('.val .reveal').html('Your current choice is ' + $('.cars').val())
+            })
+
+
+            $('.text button').click(function() {
+                $('.stuff').after('<p class = "new" >' + $('.stuff').text() + '</p>')
+            })
+
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="section hide_show">
+            <button class="hide"> Hide </button>
+            <button class="show"> Show </button>
+            <div class="right">
+                <h1> Hide/Show
+                </h1>
+                <p> click the buttons to hide or show this paragraph
+                </p>
+            </div>
+        </div>
+        <div class="section toggle">
+            <button> Toggle </button>
+            <div class="right">
+                <h1> Toggle
+                </h1>
+                <p> click the button to toggle this paragraph
+                </p>
+            </div>
+        </div>
+        <div class="section slide">
+            <button class="slidedown"> slideDown</button>
+            <button class="slideup"> slideUp</button>
+            <div class="right">
+                <h1> Slide Down/Slide Up
+                </h1>
+                <p> click the button to slide down or up this paragraph
+                </p>
+            </div>
+        </div>
+        <div class="section slidetoggle">
+            <button>slideToggle</button>
+            <div class="right">
+                <h1> slideToggle
+                </h1>
+                <p> click the button to slidetoggle this paragraph
+                </p>
+            </div>
+        </div>
+        <div class="section fade">
+            <button class="fadein"> Fade In</button>
+            <button class="fadeout"> Fade Out</button>
+            <div class="right">
+                <h1> Fade In/Out
+                </h1>
+                <p> click the button to fade out or in this paragraph
+                </p>
+            </div>
+        </div>
+        <div class="section addclass">
+            <button> AddClass
+            </button>
+            <div class="right">
+                <h1> AddClass
+                </h1>
+                <p> click the button to add class 'red' to this paragraph
+                </p>
+            </div>
+        </div>
+        <div class="section before">
+            <button>Before</button>
+            <div class="right">
+                <h1> Before
+                </h1>
+                <p> click the button to add a lorem ipsum paragraph above this paragraph
+                </p>
+            </div>
+        </div>
+        <div class="section after">
+            <button>After</button>
+            <div class="right">
+                <h1> After
+                </h1>
+                <p> click the button to add a lorem ipsum paragraph below this paragraph
+                </p>
+            </div>
+        </div>
+        <div class="section append">
+            <button> Append </button>
+            <div class="right">
+                <h1> Append
+                </h1>
+                <p> click the button to append (after) a new lorem ipsum to this paragraph
+                </p>
+            </div>
+        </div>
+        <div class="section html">
+            <button> html </button>
+            <div class="right">
+                <h1> html
+                </h1>
+                <p> click the button to replace this paragraph with lorem ipsum
+                </p>
+            </div>
+        </div>
+        <div class="section attribute">
+            <button class="getattr"> Show attr</button>
+            <button class="changeattr"> Change attr</button>
+            <div class="right">
+                <h1> attr
+                </h1>
+                <p class="red example"> click the show attr button to reveal the class of this paragraph, and the change attr button to change the class to new.
+                </p>
+                <p class="reveal new"></p>
+            </div>
+        </div>
+        <div class="section val">
+            <button> Show val </button>
+            <div class="right">
+                <h1> val
+                </h1>
+                <p>Pick a car maker</p>
+                <form>
+                    <select class="cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </form>
+                <p class="choice"> click the button to show your choice
+                </p>
+                <p class="reveal new"></p>
+            </div>
+        </div>
+        <div class="section text">
+            <button> show text </button>
+            <div class="right">
+                <h1> text
+                </h1>
+                <p> click the button to show just the text of the following:
+                </p>
+                <div class="stuff">
+                    <h1>She looks like one.</h1>
+                    <p>Oh, ow! Now, look here, my good man. We found them. Why do you think that she is a witch?</p>
+                    <p>She looks like one. The Knights Who Say Ni demand a sacrifice! Well, she turned me into a newt. <strong> Well, I got
+                            better.</strong> <em> And the hat.</ em> She's a witch!</p>
+                    <h2>Did you dress her up like this?</h2>
+                    <p> You can't expect to wield supreme
+                        power just 'cause some watery tart threw a sword at you! The Lady of the Lake, her arm clad in the purest
+                        shimmering samite, held aloft Excalibur from the bosom of the water, signifying by divine providence that I,
+                        Arthur, was to carry Excalibur. That is why I am your king.</p>
+                    <ol>
+                        <li>You don't frighten us, English pig-dogs! Go and boil your bottoms, sons of a silly person! I blow my nose at
+                            you, so-called Ah-thoor Keeng, you and all your silly English K-n-n-n-n-n-n-n-niggits!</li>
+                        <li>Why?</li>
+                        <li>Found them? In Mercia?! The coconut's tropical!</li>
+                    </ol>
+                    
+                    <h3>Well, what do you want?</h3>
+                    <p>I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction!
+                        Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second
+                        time! We want a shrubbery!!</p>
+                    <ul>
+                        <li>But you are dressed as one…</li>
+                        <li>Burn her!</li>
+                        <li>Shh! Knights, I bid you welcome to your new home. Let us ride to Camelot!</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

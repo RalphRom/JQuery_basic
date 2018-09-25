@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    margin: 10px auto;
+    width: 970px;
+    background-color: powderblue;
+}
+
+.section {
+    border-bottom: 2px lightslategrey;
+    padding: 10px;
+}
+
+.right {
+    display: inline-block;
+}
+
+.button {
+    vertical-align: top;
+}
+
+.red {
+    color: red;
+}
+
+.new {
+    margin: 10px;
+    background-color: aquamarine;
+    width: 300px;
+}
+
+.stuff {
+    margin: 10px;
+    background-color: honeydew;
+    width: 500px;
+}
